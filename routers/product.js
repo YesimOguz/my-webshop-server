@@ -15,7 +15,7 @@ router.get("/", async (req, res, next) => {
 
 router.get("/:id", async (req, res, next) => {
   try {
-    const id = re.params.id;
+    const id = req.params.id;
     const specificProduct = await product.findByPk(id);
     if (!specificProduct) {
       res.status(404).send("product does not exist");

@@ -6,7 +6,7 @@ const productRouter = require("./routers/product");
 const categoryRouter = require("./routers/category");
 
 app.use(express.json());
-app.use("./users", authRouter);
+app.use("/users", authRouter);
 app.use("/products", productRouter);
 app.use("/categories", categoryRouter);
 
